@@ -31,7 +31,7 @@ export default function ProviderButtons() {
     <>
       {providers.map((provider, i) => (
         <Button
-         onClick={() => signIn('google')}
+         onClick={() => signIn(provider.icon)}
           leftIcon={
             <SocialIcon
               as="div"
