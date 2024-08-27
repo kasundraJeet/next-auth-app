@@ -1,5 +1,6 @@
 import { Rubik } from 'next/font/google'
 import { Providers } from "@/components/provider";
+import { Provider } from "@/components/provider/SessionProvider"
 import "./globals.css";
 
 const rubik = Rubik({
@@ -16,7 +17,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={rubik.className}>
+        <Provider>
         <Providers>{children}</Providers>
+        </Provider>
       </body>
     </html>
   );
