@@ -31,6 +31,7 @@ export default function ProviderButtons() {
         <Button
           leftIcon={
             <SocialIcon
+              as="div"
               network={provider.icon}
               style={{ height: 25, width: 25, display: "block" }}
             />
