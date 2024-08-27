@@ -13,10 +13,12 @@
     "@chakra-ui/react": "^2.8.2",
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
+    "@next/swc-win32-x64-msvc": "^14.2.7",
     "framer-motion": "^11.3.30",
     "next": "14.2.6",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-social-icons": "^6.18.0"
   },
   "devDependencies": {
     "eslint": "^8",
