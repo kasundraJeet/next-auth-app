@@ -1,5 +1,7 @@
+'use client'
 import { Button } from "@chakra-ui/react";
 import { SocialIcon } from "react-social-icons";
+import { signIn } from 'next-auth/react'
 
 const providers = [
   {
@@ -29,6 +31,7 @@ export default function ProviderButtons() {
     <>
       {providers.map((provider, i) => (
         <Button
+         onClick={() => signIn('google')}
           leftIcon={
             <SocialIcon
               as="div"
