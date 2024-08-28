@@ -1,4 +1,5 @@
 import { Rubik } from "next/font/google";
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Providers } from "@/components/provider";
 import { Provider } from "@/components/provider/SessionProvider";
 import "./globals.css";
@@ -28,6 +29,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={rubik.className}>
         <Provider>
+        <SpeedInsights />
           <Providers>{children}</Providers>
         </Provider>
       </body>
