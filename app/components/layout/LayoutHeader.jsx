@@ -15,6 +15,7 @@ import {
 } from "@chakra-ui/react";
 import { signOut } from "next-auth/react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default  function Header({session}) {
   return (
@@ -60,7 +61,7 @@ export default  function Header({session}) {
               </Menu>
             </HStack>
           ) : (
-            <Button as="a" href="/login" colorScheme="brand">
+            <Button as={Link} href="/login" colorScheme="brand">
               Login
             </Button>
           )}
