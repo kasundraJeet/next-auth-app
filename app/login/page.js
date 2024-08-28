@@ -11,6 +11,7 @@ import {
 } from "@chakra-ui/react";
 import Link from "next/link";
 import ProviderButtons from "./components/ProviderButtons";
+import Image from "next/image";
 
 export default function LoginPage() {
   return (
@@ -25,7 +26,7 @@ export default function LoginPage() {
         >
           NextAuth.js Example (Server Side) by jeet kasundra{" "}
         </Text>
-        <Text className="text-center"> logo here </Text>
+        <Image src="/logo.png" alt="jeet kasundra logo" width="40" height="42" className="mx-auto" />
       </div>
       <Stack spacing={10}>
         <form className="space-y-6">

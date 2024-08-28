@@ -1,23 +1,20 @@
-"use client";
+import { getServerSession } from "next-auth/next";
+import { authOptions } from "@/api/auth/[...nextauth]/route";
 import { LayoutWrapper } from "@/components/layout";
 import { Box, Container, Stack, Text } from "@chakra-ui/react";
-import { useSession } from "next-auth/react";
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { solarizedlight } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 
-export default function Home() {
-  const { data: session } = useSession();
-
-  const sessionCode = JSON.stringify(session, null, 2);
-
+export default async function Home() {
+  const session = await getServerSession(authOptions);
   return (
-    <LayoutWrapper>
+    <LayoutWrapper session={session}>
       <Container maxWidth="2xl">
         <Box py={8} px={2}>
           <Stack spacing={8}>
             <Stack spacing={3}>
               <Text as="h1" fontWeight="600" fontSize="x-large">
-                NextAuth.js Example (Server Side)
+                NextAuth.js Example (Server Side){" "}
+                <span className="opacity-0">jeet kasundra</span>
               </Text>
               {session ? (
                 <Text as="h2" fontSize="md">
@@ -32,9 +29,9 @@ export default function Home() {
               )}
             </Stack>
             {session && (
-              <Box  overflow="hidden">
-                <SyntaxHighlighter className="rounded-lg" language="json" >
-                  {sessionCode}
+              <Box overflow="hidden">
+                <SyntaxHighlighter className="rounded-lg" language="json">
+                    {JSON.stringify(session, null, 2)}
                 </SyntaxHighlighter>
               </Box>
             )}

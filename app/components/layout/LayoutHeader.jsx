@@ -1,3 +1,4 @@
+'use client'
 import {
   Box,
   Container,
@@ -12,15 +13,21 @@ import {
   Text,
   Stack,
 } from "@chakra-ui/react";
-import { useSession , signOut} from "next-auth/react";
+import { signOut } from "next-auth/react";
+import Image from "next/image";
 
-export default function Header() {
-  const { data: session } = useSession();
+
+export default  function Header({session}) {
   return (
     <Box as="header" width="100%" py={2}>
       <Container maxW="2xl">
         <Flex justifyContent="space-between" alignItems="center">
-          <h2>Jeet Kasundra</h2>
+          <Image
+            src="/logo.png"
+            alt="jeet kasundra logo"
+            width="40"
+            height="42"
+          />
           {session ? (
             <HStack spacing={3}>
               <Text fontSize="md">{session.user?.email}</Text>
@@ -35,11 +42,19 @@ export default function Header() {
                 <MenuList marginTop={1}>
                   <MenuItem>
                     <Stack spacing={0}>
-                        <Text fontSize="sm" color="black">{session.user?.name}</Text>
-                        <Text fontSize="xs" color="gray">{session.user?.email}</Text>
+                      <Text fontSize="sm" color="black">
+                        {session.user?.name}
+                      </Text>
+                      <Text fontSize="xs" color="gray">
+                        {session.user?.email}
+                      </Text>
                     </Stack>
                   </MenuItem>
-                  <MenuItem color="red" icon={<LogOutIcon />} onClick={() => signOut()}>
+                  <MenuItem
+                    color="red"
+                    icon={<LogOutIcon />}
+                    onClick={() => signOut()}
+                  >
                     Log Out
                   </MenuItem>
                 </MenuList>
