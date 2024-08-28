@@ -15,7 +15,18 @@ import ProviderButtons from "./components/ProviderButtons";
 export default function LoginPage() {
   return (
     <AuthLayout>
-      <p className="text-center"> logo here </p>
+      <div>
+        <Text
+          as="h1"
+          fontSize="x-large"
+          opacity="0"
+          visibility="hidden"
+          className=" absolute left-0 top-0"
+        >
+          NextAuth.js Example (Server Side) by jeet kasundra{" "}
+        </Text>
+        <Text className="text-center"> logo here </Text>
+      </div>
       <Stack spacing={10}>
         <form className="space-y-6">
           <div className="space-y-4">
@@ -43,7 +54,14 @@ export default function LoginPage() {
           <ProviderButtons />
         </Stack>
       </Stack>
-      <div></div>
+      <div>
+        <Text className="text-center">
+          Created by
+          <Link href="https://jeetkasundra.com" className="underline ml-1">
+            Jeet Kasundra
+          </Link>
+        </Text>
+      </div>
     </AuthLayout>
   );
 }

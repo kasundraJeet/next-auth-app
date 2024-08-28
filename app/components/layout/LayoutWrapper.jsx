@@ -1,5 +1,5 @@
 import { Box } from "@chakra-ui/react";
-// import Footer from "./LayoutFooter";
+import Footer from "./LayoutFooter";
 import Header from "./LayoutHeader";
 
 export default function LayoutWrapper({ children }) {
@@ -16,6 +16,7 @@ export default function LayoutWrapper({ children }) {
       <Box as="section" h="100%" w="100%" className="overflow-y-auto">
         {children}
       </Box>
+      <Footer />
     </Box>
   );
 }

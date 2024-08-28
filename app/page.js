@@ -2,10 +2,14 @@
 import { LayoutWrapper } from "@/components/layout";
 import { Box, Container, Stack, Text } from "@chakra-ui/react";
 import { useSession } from "next-auth/react";
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { solarizedlight } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 export default function Home() {
   const { data: session } = useSession();
-  console.log(session)
+
+  const sessionCode = JSON.stringify(session, null, 2);
+
   return (
     <LayoutWrapper>
       <Container maxWidth="2xl">
@@ -27,7 +31,13 @@ export default function Home() {
                 </Box>
               )}
             </Stack>
-            {session ?  <pre>{JSON.stringify(session, null, 2)}</pre> : null }
+            {session && (
+              <Box  overflow="hidden">
+                <SyntaxHighlighter className="rounded-lg" language="json" >
+                  {sessionCode}
+                </SyntaxHighlighter>
+              </Box>
+            )}
           </Stack>
         </Box>
       </Container>
