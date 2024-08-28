@@ -16,7 +16,6 @@ import {
 import { signOut } from "next-auth/react";
 import Image from "next/image";
 
-
 export default  function Header({session}) {
   return (
     <Box as="header" width="100%" py={2}>
@@ -25,8 +24,8 @@ export default  function Header({session}) {
           <Image
             src="/logo.png"
             alt="jeet kasundra logo"
-            width="40"
-            height="42"
+            width="32"
+            height="28"
           />
           {session ? (
             <HStack spacing={3}>
@@ -61,7 +60,7 @@ export default  function Header({session}) {
               </Menu>
             </HStack>
           ) : (
-            <Button as="a" href="/login" colorScheme="gray">
+            <Button as="a" href="/login" colorScheme="brand">
               Login
             </Button>
           )}
@@ -80,7 +79,7 @@ function LogOutIcon() {
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      stroke-width="2"
+      strokeWidth="2"
       stroke-linecap="round"
       stroke-linejoin="round"
       class="lucide lucide-log-out"

@@ -39,11 +39,11 @@ export default function ProviderButtons() {
               style={{ height: 25, width: 25, display: "block" }}
             />
           }
-          colorScheme="blue"
+          colorScheme="brand"
           variant="outline"
           key={i}
         >
-          {provider.btn_name}
+        {provider.btn_name}
         </Button>
       ))}
     </>

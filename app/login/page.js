@@ -26,21 +26,27 @@ export default function LoginPage() {
         >
           NextAuth.js Example (Server Side) by jeet kasundra{" "}
         </Text>
-        <Image src="/logo.png" alt="jeet kasundra logo" width="40" height="42" className="mx-auto" />
+        <Image
+          src="/logo.png"
+          alt="jeet kasundra logo"
+          width="40"
+          height="42"
+          className="mx-auto"
+        />
       </div>
       <Stack spacing={10}>
         <form className="space-y-6">
           <div className="space-y-4">
             <FormControl>
-              <Input type="email" placeholder="Email address*" />
+              <Input type="email" placeholder="Email address*" focusBorderColor="brand.100" />
             </FormControl>
-            <Button type="submit" colorScheme="blue" width="100%">
+            <Button type="submit" colorScheme="brand" width="100%">
               Continue
             </Button>
           </div>
           <Text fontSize="sm" className="text-center">
             Don&#39; t have an account?{" "}
-            <Link href="/" className="text-blue-600">
+            <Link href="/" className=" underline">
               Sign Up
             </Link>
           </Text>
