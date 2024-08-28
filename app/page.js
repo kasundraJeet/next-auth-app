@@ -4,6 +4,8 @@ import { LayoutWrapper } from "@/components/layout";
 import { Box, Container, Stack, Text } from "@chakra-ui/react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 
+
+
 export default async function Home() {
   const session = await getServerSession(authOptions);
   return (

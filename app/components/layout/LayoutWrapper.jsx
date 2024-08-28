@@ -2,6 +2,8 @@ import { Box } from "@chakra-ui/react";
 import Footer from "./LayoutFooter";
 import Header from "./LayoutHeader";
 
+
+
 export default function LayoutWrapper({ children, session }) {
   return (
     <Box
