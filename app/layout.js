@@ -13,6 +13,9 @@ export const metadata = {
   title: "Next js authentication app in server side - practice by jeet kasundra",
   description: "This is an awesome Next.js application featuring next-auth for authentication and server side rendering.",
   keywords: "Next.js, SEO, next-auth, authentication, web app",
+  verification: {
+    google: "6tgXchFkLRjLLhpNFfefI8tbfDUv_vkxoh1IqXf7XJg",
+  },
   robots: {
     index: true,
     follow: true,
