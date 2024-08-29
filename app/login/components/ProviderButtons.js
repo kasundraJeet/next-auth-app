@@ -6,23 +6,28 @@ import { signIn } from 'next-auth/react'
 const providers = [
   {
     icon: "google",
+    login:'google',
     btn_name: "Continue with Google",
   },
   {
+    icon: "x",
+    login:'apple',
+    btn_name: "Continue with Apple",
+  },
+  {
     icon: "discord",
+    login:'discord',
     btn_name: "Continue with Discord",
   },
   {
     icon: "github",
+    login:'github',
     btn_name: "Continue with Github",
   },
   {
     icon: "facebook",
+    login:'facebook',
     btn_name: "Continue with FaceBook",
-  },
-  {
-    icon: "x",
-    btn_name: "Continue with Twitter",
   },
 ];
 
@@ -31,7 +36,7 @@ export default function ProviderButtons() {
     <>
       {providers.map((provider, i) => (
         <Button
-         onClick={() => signIn(provider.icon)}
+         onClick={() => signIn(provider.login)}
           leftIcon={
             <SocialIcon
               as="div"
