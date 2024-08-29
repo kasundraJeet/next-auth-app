@@ -14,7 +14,7 @@ export const metadata = {
   description: "This is an awesome Next.js application featuring next-auth for authentication and server side rendering.",
   keywords: "Next.js, SEO, next-auth, authentication, web app",
   verification: {
-    google: "6tgXchFkLRjLLhpNFfefI8tbfDUv_vkxoh1IqXf7XJg",
+    google: "pUVgq7a0APq64qKwIeon4iH6g9N2HgJeDbp1Lk7I4RE",
   },
   robots: {
     index: true,
